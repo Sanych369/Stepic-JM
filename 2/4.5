@@ -72,7 +72,7 @@ public static String printTextPerRole(String[] roles, String[] textLines) {
         sb.append(role).append(':').append('\n');                                                             // Добавляем Роль":" и перевод строки
         for (int i = 0; i < textLines.length; i++) {                                                          // Перебираем текст
             if (textLines[i].startsWith(role + ':')) {                                                        // Если текст startsWith(начинается с Роли и ":")
-                sb.append(i + 1).append(')').append(textLines[i].substring(role.length() + 1)).append('\n');  // Добавляем цифру(начиня с 1, а массивы с 0, поэтому +1), скобку к цифре, все строки этой Роли,добавляем пробел, добавляем к длине роли знак переноса на новую строку
+                sb.append(i + 1).append(')').append(textLines[i].substring(role.length() + 1)).append('\n');  // Добавляем цифру(начиня с 1, а массивы с 0, поэтому +1), скобку к цифре, все строки этой Роли, обрезаем и добавляем к длине роли знак переноса на новую строку
             }
         }
         sb.append("\n");
